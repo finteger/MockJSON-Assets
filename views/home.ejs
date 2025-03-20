@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/public/css/styles.css" />
+    </head>
+
+    <body>
+        <center>
+            <img id="image" src="/public/images/rdplogo.png" />
+            <h4>Mock JSON Database Operations</h4>
+        </center>
+
+        <form id="addUserForm" method="POST" action="/users">
+            <h4>Add User Form (POST HTTP method) </h4>
+
+            <input type="text" id="username" placeholder="Username" required />
+
+            <input type="text" id="first_name" placeholder="First Name:" required />
+
+            <input type="text" id="email" placeholder="Email:" required />
+
+            <button type="submit">Add User</button>
+
+        </form>
+
+        <form id="editUserForm" method="POST" action="/users/:id/update">
+            <h4>Edit User Form (POST HTTP method) </h4>
+
+            <input type="number" id="edit_id" placeholder="ID:" required />
+
+            <input type="text" id="new_username" placeholder="New Username:" />
+
+            <input type="text" id="new_first_name" placeholder="New First Name:" />
+
+            <input type="text" id="new_email"  placeholder="New Email:" />
+
+            <button type="submit">Edit User</button>
+
+        </form>
+
+
+        <form id="deleteUserForm" method="POST" action="/users/:id/delete" >
+            <h4>Delete User Form<h4>
+
+            <input type="text" id="delete_id" placeholder="User ID:" />
+                
+            <button type="submit" onclick="deleteUser()">Delete User</button>
+        </form>
+
+    </body>
+
+</html>
